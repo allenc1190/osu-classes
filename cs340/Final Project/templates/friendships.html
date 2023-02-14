@@ -1,0 +1,46 @@
+<h3>Friendships list</h3>
+
+<p>
+	<a href="/index">Home</a>&emsp;
+	<a href="/accounts">Accounts</a>&emsp;
+	<a href="/friendships">Friendships</a>&emsp;
+	<a href="/posts">Posts</a>&emsp;
+	<a href="/comments">Comments</a>&emsp;
+	<a href="/memberships">Memberships</a>&emsp;
+	<a href="/groups">Groups</a>&emsp;
+	<a href="/messages">Messages</a>&emsp;
+</p>
+
+<table style="border-collapse: collapse; width: 100%; height: 89px;" border="1">
+	<tbody>
+	<tr style="height: 89px;">
+	<td>From_Account_id</td>
+	<td>To_Account_id</td>
+	</tr>
+	
+	{% for a in friendships %}
+	<tr>
+		<td> {{ a.0 }}</td>
+		<td> {{ a[1] }}</td>
+		<td> {{ a[2] }}</td>
+	</tr>
+	{% endfor %}
+	
+	<tr>
+	<form id="add_friendships" action="/add_friendships" method="post">
+	<td><input type="text" placeholder="From_Account_id" name="add_From_Account_id"></td>
+	<td><input type="text" placeholder="To_Account_id" name="add_To_Account_id"></td>
+	<td style="text-align: center; width: 15px"><button name="add" type="submit" value="update">Add</button></td>
+	</form>
+	</tr>
+	</tbody>
+	</table>
+	
+	<br />
+	<form id="search_friendships" action="/search_friendships" method="get">
+		<input type="text" placeholder="From_Account_id" name="search_From_Account_id"><br />
+		<input type="text" placeholder="To_Account_id" name="search_To_Account_id"><br />
+		<input type="submit" value="Search">
+		<button type="submit" formaction="/delete_friendships">Delete</button>
+	</form>
+</html>

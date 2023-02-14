@@ -1,0 +1,53 @@
+<h3>Messages list</h3>
+
+<p>
+	<a href="/index">Home</a>&emsp;
+	<a href="/accounts">Accounts</a>&emsp;
+	<a href="/friendships">Friendships</a>&emsp;
+	<a href="/posts">Posts</a>&emsp;
+	<a href="/comments">Comments</a>&emsp;
+	<a href="/memberships">Memberships</a>&emsp;
+	<a href="/groups">Groups</a>&emsp;
+	<a href="/messages">Messages</a>&emsp;
+</p>
+
+<table id="messages_table" border="1" width="100%">
+<tbody>
+<tr style="height: 89px;">
+<td>Message_id</td>
+<td>Account_id</td>
+<td>Group_id</td>
+<td>Message</td>
+</tr>
+
+{% for m in messages %}
+<tr>
+	<td> {{ m.0 }}</td>
+	<td> {{ m[1] }}</td>
+	<td> {{ m[2] }}</td>
+	<td> {{ m[3] }}</td>
+</tr>
+{% endfor %}
+
+<tr>
+<form id="add_messages" action="/add_messages" method="post">
+<td></td>
+<td><input type="text" placeholder="Account_id" name="add_Account_id"></td>
+<td><input type="text" placeholder="Group_id" name="add_Group_id"></td>
+<td><input type="text" placeholder="Message" name="add_Message"></td>
+<td style="text-align: center; width: 15px"><button name="submit" type="submit" value="update">Add</button></td>
+</form>
+</tr>
+</tbody>
+</table>
+
+<br />
+<form id="search_messages" action="/search_messages" method="get">
+	<input type="text" placeholder="Message_id" name="search_Message_id"><br />
+	<input type="text" placeholder="Account_id" name="search_Account_id"><br />
+	<input type="text" placeholder="Group_id" name="search_Group_id"><br />
+	<input type="text" placeholder="Message" name="search_Message"><br />
+	<input type="submit" value="Search">
+	<button type="submit" formaction="/update_messages" formmethod="post">Update</button>
+	<button type="submit" formaction="/delete_messages">Delete</button>
+</form>

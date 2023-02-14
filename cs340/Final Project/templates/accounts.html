@@ -1,0 +1,51 @@
+<html>
+<h3>Accounts list</h3>
+
+<p>
+	<a href="/index">Home</a>&emsp;
+	<a href="/accounts">Accounts</a>&emsp;
+	<a href="/friendships">Friendships</a>&emsp;
+	<a href="/posts">Posts</a>&emsp;
+	<a href="/comments">Comments</a>&emsp;
+	<a href="/memberships">Memberships</a>&emsp;
+	<a href="/groups">Groups</a>&emsp;
+	<a href="/messages">Messages</a>&emsp;
+</p>
+
+<table style="border-collapse: collapse; width: 100%; height: 89px;" border="1">
+<tbody>
+<tr style="height: 89px;">
+<td>Account_id</td>
+<td>Username</td>
+<td>Email</td>
+</tr>
+
+{% for a in accounts %}
+<tr>
+	<td> {{ a.0 }}</td>
+	<td> {{ a[1] }}</td>
+	<td> {{ a[2] }}</td>
+</tr>
+{% endfor %}
+
+<tr>
+<form id="add_account" action="/add_account" method="post">
+<td></td>
+<td><input type="text" placeholder="Username" name="add_Username"></td>
+<td><input type="email" placeholder="Email" name="add_Email"></td>
+<td style="text-align: center; width: 15px"><button name="add" type="submit" value="update">Add</button></td>
+</form>
+</tr>
+</tbody>
+</table>
+
+<br />
+<form id="search_account" action="/search_account" method="get">
+	<input type="number" placeholder="Account_id" name="search_Account_id"><br />
+	<input type="text" placeholder="Username" name="search_Username"><br />
+	<input type="email" placeholder="Email" name="search_Email"><br />
+	<input type="submit" value="Search">
+	<button type="submit" formaction="/update_account" formmethod="post">Update</button>
+	<button type="submit" formaction="/delete_account">Delete</button>
+</form>
+</html>

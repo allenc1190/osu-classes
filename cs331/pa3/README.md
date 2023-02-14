@@ -1,0 +1,1 @@
+Compile and run: python3 trainingSet.txt testSet.txt

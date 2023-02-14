@@ -1,0 +1,6 @@
+Left bank: 0 chickens 0 wolves Right Bank: 3 chickens 3 wolves
+Left bank: 0 chickens 1 wolves Right Bank: 3 chickens 2 wolves
+Left bank: 0 chickens 0 wolves Right Bank: 96 chickens 94 wolves
+Left bank: 1 chickens 0 wolves Right Bank: 95 chickens 94 wolves
+Left bank: 0 chickens 0 wolves Right Bank: 96 chickens 94 wolves
+Left bank: 1 chickens 0 wolves Right Bank: 95 chickens 94 wolves

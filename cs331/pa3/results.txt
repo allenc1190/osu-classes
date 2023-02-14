@@ -1,0 +1,6 @@
+Trained using trainingSet.txt and testSet.txt
+Accuracy: 91.58%
+
+Trained using trainingSet.txt and testSet.txt
+Accuracy: 89.94%
+
