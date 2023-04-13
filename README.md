@@ -13,6 +13,5 @@ CS 362 - Software Engineering II <br />
 CS 372 - Intro to Computer Networks <br />
 CS 381 - Programming Language Fundamentals <br />
 CS 475 - intro to Parall Programming <br />
-CS 450 - Intro to Computer Graphics <br />
 CS 493 - Cloud Application Development <br />
 Jos (CS 444) - Operating Systems II <br />
