@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        h1 {
+            color: blue;
+            margin: auto;
+            width: 60%;
+            border: 2px solid red;
+            padding: 10px;
+            text-align: center;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        p {
+            text-indent: 50px;
+            text-align: center;
+            letter-spacing: 3px;
+            padding: 5%;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+    </style>
+    <title>Assignment 6 - Oauth</title>
+</head>
+<body>
+    <h1>Welcome to cs493 Assignment 6!</h1>
+        <p>This application is for assignment 6. This application uses your public google profile details such as your name and display it on screen. This application will only work with @oregonstate.edu emails. Click submit button to see your given name, family name, and session state code.</p>
+        <br><br>
+    <div style="text-align: center">
+        <form action="/gauth">
+            <input type="submit" value="Sign In to test application assignment submission" />
+        </form>
+    </div>
+</body>
+</html>
